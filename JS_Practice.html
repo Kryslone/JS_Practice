@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSPractice</title>
+        <script language="Javascript" type="text/javascript">
+            function changeColor() {
+            document.getElementById("green").style.color="green";
+            }
+            function checkAge() {
+                var age = document.form.age.value;
+                if(age>65)
+                {
+                    document.getElementById("check").innerHTML="Age is Above 65";
+                }
+                else
+                {
+                    document.getElementById("check").innerHTML="Age is below 65";
+                }
+            }
+            function Multiplication() {
+                var num1 = document.getElementById("no1").value; 
+                var num2 = document.getElementById("no2").value;
+                document.getElementById("output").innerHTML = num1 * num2;
+            }
+            function Division() {
+                var num1 = document.getElementById("no1").value; 
+                var num2 = document.getElementById("no2").value;
+                document.getElementById("output").innerHTML = num1 / num2;
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="green">Change My Color!</h1>
+        <button onclick="changeColor();" style="margin-left: 16px;" name="color">Change to Green</button><br>
+            <form name="form" style="padding: 15px;border: 10px; width: 210; border-color: white;
+            background-color: white; border: 20px; margin: 0 auto;">
+                Age: <br><input type="text" name="age" />
+                <p id="check" style="color:gray;font-size: 13px;"></p>
+                <input type="button" value="Confirm age" onclick="checkAge();"><br>
+                Input first number: <br><input type="text" id="no1" /><br>
+                Input second number: <br><input type="text" id="no2" /><br>
+                <br> <input type="button" value="Multiply" onclick="Multiplication();" />
+                <input type="button" value="Divide" onclick="Division();" /><br>
+                <br> Total: <br><p id="output" style="color: green; border: 3px solid; text-align: center; max-width: 170px;"></p>
+            </form>
+            
+        
+    </body>
+</html>
